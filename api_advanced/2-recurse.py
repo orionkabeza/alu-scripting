@@ -26,8 +26,9 @@ def recurse(subreddit, hot_list=[], after=None):
     headers = {"User-Agent": "linux:0x16.api_advanced:v1.0 (by /u/bot)"}
     params = {"limit": 100, "after": after}
 
-    response = requests.get(url, headers=headers, params=params,
-                             allow_redirects=False)
+    response = requests.get(
+        url, headers=headers, params=params, allow_redirects=False
+    )
 
     if response.status_code != 200:
         return None
